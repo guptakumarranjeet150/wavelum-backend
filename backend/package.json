@@ -4,8 +4,8 @@
   "description": "Backend for Vesting Vault system with cliff support for top-ups",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
+    "start": "node init && node src/index.js",
+    "dev": "node init && nodemon src/index.js",
     "test": "cross-env NODE_ENV=test jest --forceExit",
     "test:watch": "cross-env NODE_ENV=test jest --watch",
     "test:coverage": "cross-env NODE_ENV=test jest --coverage --forceExit",
@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@apollo/server": "^4.9.5",
-    "@aws-sdk/client-secrets-manager": "^3.1043.0",
+    "@aws-sdk/client-secrets-manager": "^3.1053.0",
     "@graphql-tools/schema": "^10.0.33",
     "@nestjs-redis/throttler-storage": "^1.2.0",
     "@nestjs/bullmq": "^11.0.4",
